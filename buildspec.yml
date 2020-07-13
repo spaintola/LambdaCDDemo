@@ -3,6 +3,9 @@ phases:
   install:
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket disney-cicd --output-template-file outputSamTemplate.yaml
+  pre_build:
+    commands:
+      - pip install -t ./req_cd  -r requirements.txt 
 artifacts:
   type: zip
   files:
