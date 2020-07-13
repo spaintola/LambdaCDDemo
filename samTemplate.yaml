@@ -24,7 +24,7 @@ Resources:
     Properties: 
       LayerName: request_build_layer
       ContentUri: 'req_build_layer.zip'
-      ComptabileRuntimes:
+      CompatibleRuntimes:
         - python3.7
       LicenseInfo: MIT
       RetentionPolicy: Retain
