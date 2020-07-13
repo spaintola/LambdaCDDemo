@@ -8,6 +8,7 @@ phases:
       - cd python
       - zip -r req_build_layer *
       - ls 
+      - cd ..
   build:
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket disney-cicd --output-template-file outputSamTemplate.yaml
