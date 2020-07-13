@@ -11,7 +11,7 @@ Resources:
       Description: 'Lambda function for CD Demo'
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::897913520775:role/MyLambdaRole'
+      Role: 'arn:aws:iam::897913520775:role/lambda_basic_execution'
       Environment:
         Variables:
           REGION: us-east-1
