@@ -7,8 +7,9 @@ phases:
       - pip install -t ./python  -r requirements.txt 
       - cd python
       - zip -r req_build_layer.zip *
-      - ls 
+      - mv req_build_layer.zip ../
       - cd ..
+      - ls
   build:
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket disney-cicd --output-template-file outputSamTemplate.yaml
