@@ -21,4 +21,5 @@ artifacts:
   type: zip
   files:
     - samTemplate.yaml
+    - req_build_layer.zip
     - outputSamTemplate.yaml
