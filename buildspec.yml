@@ -16,7 +16,7 @@ phases:
     commands:
       - ls
       - pwd
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket disney-cicd --output-template-file outputSamTemplate.yaml
+      - aws sam package --template-file samTemplate.yaml --s3-bucket disney-cicd --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
   files:
