@@ -1,9 +1,10 @@
-version: 0.1
+version: 0.2
 phases:
   
   pre_build:
     commands:
-      - pip install -t ./python  -r requirements.txt
+      - mkdir -p python 
+      - pip install -t ./python  -r requirements.txt 
       - cd python
       - zip -r req_build_layer *
       - ls 
