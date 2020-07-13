@@ -1,14 +1,15 @@
 version: 0.1
 phases:
-  install:
-    commands:
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket disney-cicd --output-template-file outputSamTemplate.yaml
+  
   pre_build:
     commands:
       - pip install -t ./python  -r requirements.txt
       - cd python
       - zip -r req_build_layer *
       - ls 
+  build:
+    commands:
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket disney-cicd --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
   files:
