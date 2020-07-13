@@ -6,7 +6,7 @@ phases:
   pre_build:
     commands:
       - pip install -t ./python  -r requirements.txt
-      - zip -r  ./python req_build_layer
+      - zip -r  ./python -i req_build_layer
       - ls 
 artifacts:
   type: zip
