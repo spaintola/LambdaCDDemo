@@ -8,6 +8,7 @@ phases:
       - cd python
       - zip -r req_build_layer.zip *
       - mv req_build_layer.zip ../
+      - chmod 777 req_build_layer.zip
       - cd ..
       - ls
   build:
