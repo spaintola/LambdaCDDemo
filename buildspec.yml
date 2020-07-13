@@ -6,7 +6,7 @@ phases:
       - mkdir -p python 
       - pip install -t ./python  -r requirements.txt 
       - cd python
-      - zip -r req_build_layer *
+      - zip -r req_build_layer.zip *
       - ls 
       - cd ..
   build:
