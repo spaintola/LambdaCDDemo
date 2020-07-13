@@ -11,8 +11,11 @@ phases:
       - cd .. 
       - chmod 777 req_build_layer.zip
       - ls
+      - pwd
   build:
     commands:
+      - ls
+      - pwd
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket disney-cicd --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
